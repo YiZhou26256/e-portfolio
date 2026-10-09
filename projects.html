@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Yi Zhou</title>
+  <meta name="description" content="Selected projects by Yi Zhou — apps, experiments, and side quests." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Yi Zhou<span class="brand-dot">.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html" class="active" aria-current="page">Projects</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <h1>My to-do list 📝</h1>
+        <p class="page-lede">A friendly little planner — pick a date on the calendar, add a task, and tick it off when it's done.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="todo-app reveal">
+
+          <div class="todo-form">
+            <label class="todo-input-wrap" for="todo-text">
+              <span class="todo-label">What do you need to do?</span>
+              <input type="text" id="todo-text" placeholder="e.g. Finish the design brief" autocomplete="off" />
+            </label>
+
+            <div class="todo-calendar" role="group" aria-label="Pick a date">
+              <div class="cal-header">
+                <button type="button" class="cal-nav" id="cal-prev" aria-label="Previous month">‹</button>
+                <span id="cal-title" aria-live="polite">Month</span>
+                <button type="button" class="cal-nav" id="cal-next" aria-label="Next month">›</button>
+              </div>
+              <div class="cal-weekdays" aria-hidden="true">
+                <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+              </div>
+              <div class="cal-grid" id="cal-grid"></div>
+            </div>
+
+            <div class="todo-pickers">
+              <div class="picker-group">
+                <span class="picker-label">Emoji</span>
+                <div class="emoji-row" id="emoji-row" role="group" aria-label="Pick an emoji for the task">
+                  <button type="button" class="emoji-pick is-selected" data-emoji="📝" aria-pressed="true">📝</button>
+                  <button type="button" class="emoji-pick" data-emoji="💡" aria-pressed="false">💡</button>
+                  <button type="button" class="emoji-pick" data-emoji="⭐" aria-pressed="false">⭐</button>
+                  <button type="button" class="emoji-pick" data-emoji="🔥" aria-pressed="false">🔥</button>
+                  <button type="button" class="emoji-pick" data-emoji="🎯" aria-pressed="false">🎯</button>
+                  <button type="button" class="emoji-pick" data-emoji="🚀" aria-pressed="false">🚀</button>
+                  <button type="button" class="emoji-pick" data-emoji="📚" aria-pressed="false">📚</button>
+                  <button type="button" class="emoji-pick" data-emoji="☕" aria-pressed="false">☕</button>
+                  <button type="button" class="emoji-pick" data-emoji="🛒" aria-pressed="false">🛒</button>
+                  <button type="button" class="emoji-pick" data-emoji="❤️" aria-pressed="false">❤️</button>
+                </div>
+              </div>
+
+              <div class="picker-group">
+                <span class="picker-label">Priority</span>
+                <div class="priority-row" id="priority-row" role="group" aria-label="Pick a priority level">
+                  <button type="button" class="priority-pick priority-low is-selected" data-priority="low" aria-pressed="true">Low</button>
+                  <button type="button" class="priority-pick priority-med" data-priority="medium" aria-pressed="false">Medium</button>
+                  <button type="button" class="priority-pick priority-high" data-priority="high" aria-pressed="false">High</button>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary todo-add" id="todo-add">Add to list</button>
+          </div>
+
+          <p class="todo-count" id="todo-count" aria-live="polite">0 of 0 tasks completed</p>
+          <ul class="todo-list" id="todo-list" aria-label="Your tasks"></ul>
+          <p class="todo-empty" id="todo-empty">No tasks yet — pick a date and add your first one. 🌱</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-facts">
+        <p class="fun-facts-title">✨ Fun Facts About Me</p>
+        <ul class="fun-facts-list">
+          <li><span aria-hidden="true">🌍</span> Passionate about exploring cross-cultural stories, and I enjoy reading educational psychology literature in my spare time.</li>
+          <li><span aria-hidden="true">🎨</span> Keen on designing creative language-learning activities for adolescent and adult learners.</li>
+          <li><span aria-hidden="true">💻</span> An avid learner of digital teaching tools, always experimenting with tech-enhanced language pedagogy.</li>
+          <li><span aria-hidden="true">🪞</span> Enjoy practising reflective teaching to continuously improve my classroom practice.</li>
+        </ul>
+      </div>
+      <p class="copyright">© <span id="year"></span> Yi Zhou · Made with care and a lot of tea ☕</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

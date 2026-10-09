@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me — Yi Zhou</title>
+  <meta name="description" content="Get in touch with Yi Zhou — email, social links, and a friendly contact form." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Yi Zhou<span class="brand-dot">.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active" aria-current="page">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <h1>Let's say hello 💌</h1>
+        <p class="page-lede">Questions, ideas, book recommendations, or pictures of your pets — I'd genuinely love to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+          <div class="info-card reveal">
+            <div class="info-icon" aria-hidden="true">✉️</div>
+            <div>
+              <h2>Email</h2>
+              <p><a class="text-link" href="mailto:hello@yizhou.example">hello@yizhou.example</a></p>
+            </div>
+          </div>
+          <div class="info-card reveal">
+            <div class="info-icon" aria-hidden="true">🔗</div>
+            <div>
+              <h2>Around the web</h2>
+              <ul class="social-list">
+                <li><a href="#" class="text-link">LinkedIn ↗</a></li>
+                <li><a href="#" class="text-link">GitHub ↗</a></li>
+                <li><a href="#" class="text-link">Dribbble ↗</a></li>
+                <li><a href="#" class="text-link">Instagram ↗</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="info-card reveal">
+            <div class="info-icon" aria-hidden="true">📍</div>
+            <div>
+              <h2>Based in</h2>
+              <p>Portland, Oregon — happy to work across time zones.</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Let's work together!" />
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me a little about what's on your mind…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send message 🚀</button>
+          <p class="form-note" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-facts">
+        <p class="fun-facts-title">✨ Fun Facts About Me</p>
+        <ul class="fun-facts-list">
+          <li><span aria-hidden="true">🌍</span> Passionate about exploring cross-cultural stories, and I enjoy reading educational psychology literature in my spare time.</li>
+          <li><span aria-hidden="true">🎨</span> Keen on designing creative language-learning activities for adolescent and adult learners.</li>
+          <li><span aria-hidden="true">💻</span> An avid learner of digital teaching tools, always experimenting with tech-enhanced language pedagogy.</li>
+          <li><span aria-hidden="true">🪞</span> Enjoy practising reflective teaching to continuously improve my classroom practice.</li>
+        </ul>
+      </div>
+      <p class="copyright">© <span id="year"></span> Yi Zhou · Made with care and a lot of tea ☕</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
